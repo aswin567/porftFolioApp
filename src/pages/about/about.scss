@@ -1,0 +1,149 @@
+$primary-color: #e83b35;
+page-about {
+    .timeline-cont{
+        position: relative;
+        .timeline{
+             position: absolute;
+             left: 50%;
+             width: 4px;
+             margin-left: -2px;
+             background: rgba(232, 103, 103, 0.16);
+             border-radius:4px;
+             height: 86%; 
+        }
+        .job{
+            background-color: #fff;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);   
+            border-top: 5px solid $primary-color;
+            padding: 20px 5%;
+            position: relative; 
+            text-align: center;
+            transition: all ease-in-out .3s;
+            .dot{
+                top: 73px;
+                width: 8px;
+                height: 8px;
+                display: block;
+                position: absolute;  
+                border-radius: 50%;
+                background: $primary-color;              
+            }
+            .arrow{
+                top: 60px;
+                width: 12px;
+                height: 41px;
+                display: block;
+                position: absolute;
+                background-image:  url("../assets/images/arrows.png");
+                background-repeat: no-repeat;
+                &:before{
+                    width: 0;
+                    height: 0;
+                    content: '';
+                    display: block;                    
+                }                
+            }
+            .date{
+                color: $primary-color;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1;
+                text-align: center;
+                margin-bottom: 15px;               
+            }
+            h3{
+                color: #414141;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 1.1;
+                text-align: center;
+                margin-bottom: 20px;
+                transition: opacity ease-in-out .3s;   
+                &:hover{
+                    opacity: 0.6;
+                }             
+            }
+            h4{
+                color: #878787;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 1.1;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 30px;                
+            }
+            p{
+                margin-bottom: 25px;
+                text-align: left;
+                color:#858585;
+            }        
+        }
+        .jl{
+            width: calc(50% - 60px);
+            float: left;
+            margin-right: 60px;
+            margin-bottom: 80px;
+            .dot{
+                right: -54px;
+            }
+            .arrow{
+                right: -12px;
+                background-position: -18px 0;
+                &:before{
+                    margin-right: 2px;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-left: 10px solid #fff;                    
+                }               
+            }
+        }
+        .mr{
+            width: calc(50% - 50px);
+            margin-right: 50px;
+            opacity: 1
+        }
+        .jr{
+            width: calc(50% - 60px);
+            float: left;
+            margin-left: 60px;
+            margin-top: 80px;
+            .dot{
+                left: -54px;
+            }
+            .arrow{
+                left: -12px;
+                background-position: 0 0; 
+                &:before{
+                    margin-left: 2px;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-right: 10px solid #fff;                   
+                }                  
+            }
+        }
+        .ml{
+            width: calc(50% - 50px);
+            margin-left: 50px;
+            opacity: 1
+        }
+    }
+}
+.section-title{
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .jl,.jr {
+        width: 100% !important;
+        margin: 0 auto !important;
+        margin-bottom: 40px !important;
+    }
+    .arrow,.dot{
+        display: none !important;
+    }
+    .timeline-cont{
+        .timeline{
+        height: 84% !important;            
+        }
+    }
+    
+}
